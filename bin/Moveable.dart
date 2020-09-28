@@ -1,0 +1,3 @@
+class Moveable {
+  void move() {}
+}
