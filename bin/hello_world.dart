@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(List<String> arguments) {
   /**
    * Bentuk sebuah fungsi adalah seperti pada Java
@@ -50,4 +52,23 @@ void main(List<String> arguments) {
       print('$name, $age, $activeUser');
   greetUser3(name: 'Tiago Silva');
   greetUser3(name: 'Werner', activeUser: true);
+
+  /**
+   * immutable variable 
+   * CONST vs FINAL
+   * CONST variable harus dapat nilai sebelum compile
+   * e.g. 
+   *  bisa => const double pi = 3.14;
+   *  gak bisa => const DateTime date = new DateTime.now();
+   * 
+   * FINAL variable bisa dapat nilai saat compile
+   *  bisa => final username = stdin.readLineSync();
+   *  bisa => final var date = new DateTime.now();
+   */
+  const double pi = 3.14;
+  final String username = stdin.readLineSync();
+  final DateTime date = new DateTime.now();
+  print(pi);
+  print(username);
+  print(date);
 }
