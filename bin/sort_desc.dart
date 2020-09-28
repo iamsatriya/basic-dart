@@ -1,23 +1,12 @@
-import 'sort_desc.dart';
-
-void main(List<String> arguments) {
-  var list = [1, 4, 5, 6, 2, 7];
-  print(list);
-  var sortedList = list.sortAsc();
-  print(sortedList);
-  var sortedDescList = list.sortDesc();
-  print(sortedDescList);
-}
-
 extension Sorting on List<int> {
-  List<int> sortAsc() {
+  List<int> sortDesc() {
     var list = this;
     var length = this.length;
 
     for (int i = 0; i < length - 1; i++) {
       int min = i;
       for (int j = i + 1; j < length; j++) {
-        if (list[j] < list[min]) {
+        if (list[j] > list[min]) {
           min = j;
         }
       }
